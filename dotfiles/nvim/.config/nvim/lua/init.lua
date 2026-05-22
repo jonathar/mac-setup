@@ -1,0 +1,7 @@
+-- require('plugins')
+require('config.lazy')
+require('opts')
+require('keymaps')
+require('lsp')
+require('lualine_opts')
+require('treesitter_opts')

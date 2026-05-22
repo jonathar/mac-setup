@@ -1,0 +1,8 @@
+.DS_Store
+.Spotlight-V100
+.Trashes
+._*
+*.swp
+*.swo
+.env
+.env.local
