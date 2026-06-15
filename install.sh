@@ -74,7 +74,9 @@ step_dotfiles() {
 step_gh_extensions() {
   info "Installing gh extensions..."
   gh extension install dlvhdr/gh-dash
-  success "gh extensions installed"
+  info "Setting gh aliases..."
+  gh alias set pr-url --clobber '!gh pr view "$@" --json url --jq ".url" | pbcopy'
+  success "gh extensions and aliases configured"
 }
 
 step_macos() {
