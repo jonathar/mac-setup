@@ -17,9 +17,10 @@ Usage: $(basename "$0") [step]
 Steps:
   xcode     Install Xcode CLI tools
   brew      Install Homebrew and run Brewfile
-  dotfiles  Symlink dotfiles with GNU Stow
-  macos     Apply macOS defaults
-  iterm2    Install iTerm2 Tokyo Night profile
+  dotfiles      Symlink dotfiles with GNU Stow
+  gh_extensions Install gh CLI extensions
+  macos         Apply macOS defaults
+  iterm2        Install iTerm2 Tokyo Night profile
 
 Omit step to run everything in order.
 EOF
@@ -70,6 +71,12 @@ step_dotfiles() {
   success "Dotfiles linked"
 }
 
+step_gh_extensions() {
+  info "Installing gh extensions..."
+  gh extension install dlvhdr/gh-dash
+  success "gh extensions installed"
+}
+
 step_macos() {
   info "Applying macOS defaults..."
   # shellcheck source=macos.sh
@@ -109,13 +116,15 @@ case "${1:-all}" in
     step_xcode
     step_brew
     step_dotfiles
+    step_gh_extensions
     step_macos
     step_iterm2
     ;;
   xcode)    step_xcode ;;
   brew)     step_brew ;;
-  dotfiles) step_dotfiles ;;
-  macos)    step_macos ;;
+  dotfiles)      step_dotfiles ;;
+  gh_extensions) step_gh_extensions ;;
+  macos)         step_macos ;;
   iterm2)   step_iterm2 ;;
   -h|--help|help) usage ;;
   *) error "Unknown step: '${1}'. Run with --help to see available steps." ;;

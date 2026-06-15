@@ -25,6 +25,13 @@ vim.api.nvim_set_keymap('n', '<leader>gs', ':Git<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>gb', ':Git blame<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>gd', ':Git diff<CR>', opts)
 
+-- Diffview
+vim.api.nvim_set_keymap('n', '<leader>gv', ':DiffviewOpen<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>gV', ':DiffviewOpen HEAD^!<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>gh', ':DiffviewFileHistory %<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>gH', ':DiffviewFileHistory main...<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>gx', ':DiffviewClose<CR>', opts)
+
 -- Telescope
 vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)

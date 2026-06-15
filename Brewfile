@@ -114,6 +114,7 @@ brew "goles/battery/battery"
 # Command-line interface for 1Password
 # Nerd Font (required for icons in eza, starship, neovim)
 cask "font-jetbrains-mono-nerd-font"
+cask "font-fira-code-nerd-font"
 # Command-line interface for 1Password
 cask "1password-cli", args: { appdir: "/Applications" }
 # Automatic tiling window manager similar to xmonad

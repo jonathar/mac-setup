@@ -36,6 +36,7 @@ alias vim="nvim"
 alias lg="lazygit"
 alias g="git"
 alias '??'='claude -p'
+alias gdiff="nvim -c 'DiffviewOpen'"
 
 # ── Keybindings ───────────────────────────────────────────────────────────────
 bindkey '^A' beginning-of-line
