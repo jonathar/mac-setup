@@ -25,6 +25,7 @@ require("lazy").setup({
     { 'tpope/vim-unimpaired' },
     { 'tpope/vim-fugitive' },
     { 'sindrets/diffview.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+		{ 'gh-tui-tools/gh-review.nvim' },
     { 'diepm/vim-rest-console' },
     { 'preservim/nerdtree' },
     { 'easymotion/vim-easymotion' },
