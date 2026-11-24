@@ -1,0 +1,29 @@
+# ── Git aliases ───────────────────────────────────────────────────────────────
+
+# Status / diff
+alias gst="git status"
+alias gd="git diff"
+
+# Add
+alias ga="git add"
+
+# Commit
+alias gc="git commit -v"
+alias gca="git commit -v -a"
+alias 'gc!'="git commit -v --amend"
+alias 'gca!'="git commit -v -a --amend --no-edit"
+
+# Branch
+alias gb="git branch"
+alias gba="git branch -a"
+
+# Checkout / switch
+alias gco="git checkout"
+
+# Log
+alias glog="git log --oneline --decorate --graph"
+alias glogg="git log --oneline --decorate --graph --all"
+
+# Cherry-pick
+alias gcp="git cherry-pick"
+alias gcpc="git cherry-pick --continue"

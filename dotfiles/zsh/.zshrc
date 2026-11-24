@@ -28,6 +28,8 @@ command -v direnv &>/dev/null && eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
 
 # ── Aliases ───────────────────────────────────────────────────────────────────
+[[ -f "$HOME/.zsh_git_aliases" ]] && source "$HOME/.zsh_git_aliases"
+
 alias ls="eza --icons"
 alias ll="eza --icons -la"
 alias lt="eza --icons --tree --level=2"
