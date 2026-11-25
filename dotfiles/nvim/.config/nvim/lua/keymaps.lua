@@ -8,6 +8,7 @@ local opts = {
 -- General mappings
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>e', ':e!<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTree<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>c', ':set cursorline!<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader><space>', ':noh<CR>', opts)
